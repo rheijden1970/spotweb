@@ -380,7 +380,7 @@ class Services_Nntp_Engine {
         } # if
 
         try {
-            $ret = $this->_nntp->connect($this->_server, $this->_serverenc, $this->_serverport, 10);
+            $ret = $this->_nntp->connect($this->_server, $this->_serverenc, $this->_serverport, 600);
             if ($ret === false) {
                 throw new NntpException('Error while connecting to server (server did not respond)', -1);
             } # if
